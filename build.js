@@ -86,7 +86,8 @@ async function write(repos, repo, content) {
   let html = await ejs.renderFile('templates/page.ejs', data, options);
   let desc = repo.split('/');
   try {
-    await fs.mkdirAsync(path.join(SITE_DEST));
+    if (!fs.existsSync(path.join(SITE_DEST)))
+      await fs.mkdirAsync(path.join(SITE_DEST));
   } catch (e) { 
     console.log('error', e);
   }
