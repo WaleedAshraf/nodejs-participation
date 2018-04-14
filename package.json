@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "forever app.js",
-    "postinstall": "node build.js && forever restartall"
+    "postinstall": "node build.js",
+    "build": "node build.js && forever restartall"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
