@@ -5,7 +5,7 @@ let app = express();
 
 let staticPath = path.join(__dirname, '/dist');
 app.use(express.static(staticPath));
-
+console.log('__dirname:',__dirname);
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/nodejs/TSC.html'));
 });
