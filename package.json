@@ -6,9 +6,9 @@
   "author": "Adam Miller <ammiller@linkeidn.com>",
   "license": "MIT",
   "scripts": {
-    "start": "forever start app.js",
+    "start": "node app.js",
     "build": "node build.js",
-    "buildStart": "node build.js && forever restartall"
+    "buildStart": "node build.js && node app.js"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
