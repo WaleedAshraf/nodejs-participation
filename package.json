@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "build": "node build.js && node app.js"
+    "build": "node build.js",
+    "buildStart": "node build.js && node app.js"
   },
   "dependencies": {
     "bluebird": "^3.5.1",

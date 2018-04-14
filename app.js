@@ -6,6 +6,10 @@ let app = express();
 let staticPath = path.join(__dirname, '/dist');
 app.use(express.static(staticPath));
 
-let server = app.listen((port) => {
-  console.log(`listening on port:${server.address().port}`);
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/nodejs/TSC.html'));
+});
+
+app.listen(port, function() {
+  console.log('Our app is running on http://localhost:' + port);
 });
