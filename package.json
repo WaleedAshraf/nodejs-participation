@@ -6,7 +6,7 @@
   "author": "Adam Miller <ammiller@linkeidn.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
+    "start": "forever start app.js",
     "build": "node build.js",
     "buildStart": "node build.js && node app.js"
   },
