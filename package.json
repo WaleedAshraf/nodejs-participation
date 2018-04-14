@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "build": "node build.js",
+    "postinstall": "node build.js",
     "buildStart": "node build.js && node app.js"
   },
   "dependencies": {
