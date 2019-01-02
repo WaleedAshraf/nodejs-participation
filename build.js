@@ -43,7 +43,7 @@ async function parse(REPO){
 
     // If no "# Present" section, log error and continue.
     if (!section) {
-      console.error(`No Present section found for ${doc}`);
+      console.error(`No Present section found for ${doc} in ${REPO}`);
       continue;
     }
 
@@ -52,7 +52,7 @@ async function parse(REPO){
 
     // If nobody present, log error and continue.
     if (!present) {
-      console.error(`Discovered no present members for ${doc}`);
+      console.error(`Discovered no present members for ${doc} in ${REPO}`);
       continue;
     }
 
@@ -88,7 +88,7 @@ async function write(repos, repo, content) {
   try {
     if (!fs.existsSync(path.join(SITE_DEST)))
       await fs.mkdirAsync(path.join(SITE_DEST));
-  } catch (e) { 
+  } catch (e) {
     console.log('error', e);
   }
   await fs.writeFileAsync(path.join(SITE_DEST, `${desc[1]}.html`), html);
@@ -97,7 +97,7 @@ async function write(repos, repo, content) {
 async function run(){
 
   // Remove old site
-  await rimraf(SITE_DEST);
+  // await rimraf(SITE_DEST);
 
   // For each repository we are generating a report for
   for (let repo of REPOS) {
