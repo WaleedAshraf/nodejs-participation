@@ -6,16 +6,15 @@
   "author": "Adam Miller <ammiller@linkeidn.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "postinstall": "node build.js",
-    "buildStart": "node build.js && node app.js"
+    "start": "node build.js && node app.js",
+    "build": "node build.js"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
     "download-git-repo": "^1.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "forever": "^0.15.3",
+    "forever": "^3.0.0",
     "path": "^0.12.7",
     "rimraf": "^2.6.2"
   }
